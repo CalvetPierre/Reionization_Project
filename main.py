@@ -76,34 +76,24 @@ for i in range(cf.N_t):
 	num.updt_F(cf.chem)
 	num.compute_khi()
 	num.compute_P()
+	"""num.compute_T()"""
 	if (i%(cf.N_t/10) == 0):
 		print(i,"/",cf.N_t)
 		plt.figure(1)
 		plt.title("Photon density for a ponctual source (with Hydrogen photo-ionization")
 		plt.plot(np.arange(0, cf.N_c, 1)*cf.dx, cf.N)
-		# plt.plot(np.arange(0, cf.N_c, 1)*cf.dx, cf.x*3e8)
 		# plt.axvline((cf.N_c/2+6)*cf.dx + (i*cf.dt*cf.c))
 		# plt.axvline(cf.N_c/2*cf.dx + (cf.N_photons*cf.dx/(ch.alphaBH(cf.T)*cf.rho*cf.rho*1e6)/2))
-		# plt.axvline(cf.N_c/2*cf.dx)
 		# plt.axvline(cf.N_c/2*cf.dx + cf.tf*cf.c)
 		plt.xlabel(" Distance x [m]")
 		plt.ylabel("Photon Density [/m³]")
-		# plt.ylim((0,0.1))
-		plt.figure(2)
-		plt.title("Photon flux")
-		plt.plot(np.arange(0, cf.N_c, 1)*cf.dx, (cf.F))
-		# plt.axvline(cf.N_c/2*cf.dx + cf.N_photons*cf.dx/(ch.alphaBH(cf.T)*cf.rho*cf.rho*1e6))
-		# plt.axvline(cf.N_c/2*cf.dx)
-		# plt.axvline(cf.N_c/2*cf.dx + cf.tf*cf.c)
 		
-		# plt.axvline(cf.N_c/2*cf.dx + (i*cf.dt*cf.c))
 		
 		if cf.chem == 1:
 			plt.figure(3)
 			plt.title("Ionization rate")
 			plt.plot(np.arange(0, cf.N_c, 1)*cf.dx, cf.x)
 			# plt.axvline(cf.N_c/2*cf.dx + cf.N_photons*cf.dx/(ch.alphaBH(cf.T)*cf.rho*cf.rho*1e6))
-			# plt.axvline(cf.N_c/2*cf.dx)
 			# plt.axvline(cf.N_c/2*cf.dx + cf.tf*cf.c)
 
 plt.show()
