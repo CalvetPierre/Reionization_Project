@@ -3,6 +3,7 @@ import numpy as np
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  Parameters  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 c = sc.c # speed of light
+kb = sc.k #boltzmann constant
 
 # courant_factor condition < 1
 courant_factor = 0.4
