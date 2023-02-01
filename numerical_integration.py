@@ -103,6 +103,14 @@ def source(param = 0, NS = 1, width = 1):
 		updt_PacketSource(width)
 		
 		
-		
-		
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Temperature coupling ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+"""		
+def compute_T():
+	
+	cf.T = cf.T/2 + (cf.H-cf.L)*cf.dt/(3*cf.rho*(1+cf.x)*cf.kb)
+"""	
+	
+	
+	
+	
 		
