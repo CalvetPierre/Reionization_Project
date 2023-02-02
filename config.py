@@ -25,7 +25,7 @@ F_GLF = np.zeros(N_c)
 P = np.zeros(N_c)
 P_GLF = np.zeros(N_c)
 Khi = np.zeros(N_c)
-T = 1e4 * np.ones(N_c)
+"""T = 1e4 * np.ones(N_c)"""
 
 # List for Ionization
 x = np.ones(N_c)*0.0012
